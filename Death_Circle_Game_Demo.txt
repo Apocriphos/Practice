@@ -1,0 +1,18 @@
+Başla
+Çemberde bulunacak oyuncu sayısını belirle (P)
+"P>1" doğru ise devam et değilse 1 numaralı satıra dön
+Hayatta kalmasını istediğin insan sayısını belirle (s)
+"P=s" doğru ise 17 numaralı satıra geç değilse devam et
+"P>s" doğru ise devam et değilse 4 numaralı satıra dön
+"P" tane insanı bir çember oluşturacak ve yüzleri çemberin merkezine dönük olacak şekilde diz
+Çemberin içinden bir oyuncuyu "1. Oyuncu" seç
+"1. Oyuncu"dan başlayıp sırayla saat yönünün tersi yönde oyunculara 0'dan (P-1)'e kadar ardışık sayılar ata.
+"p=P" olacak şekilde o an hayattaki insanları temsil edecek bir "p" değişkeni belirle
+"i=0" olacak şekilde hamle sayısını temsil edecek bir "i" değişkeni belirle.
+"x=i mod P" olacak şekilde sırası gelen oyuncuya atanmış değeri temsil edecek bir "x" değişkeni belirle
+"c=i/p" olacak şekilde döngü sayısını temsil edecek bir "c" tam sayısı belirle (ondalıkları aşağı yuvarla)
+"(x+1). Oyuncu" canlı ise sağındaki ilk canlı oyuncuyu öldür, "i" sayısını 1 artır ve "p" sayısını 1 azalt değilse "i" sayısını 1 artır ve 12 numaralı satıra dön
+"p=s" doğru ise devam et değilse 12 numaralı satıra dön
+-Hayatta kalan oyuncu sayısı istenen sayıya "c" döngüde ulaşmıştır OYUN BİTTİ- anonsunu geç ve 18 numaralı satıra geç
+-Hayatta kalan oyuncu sayısı zaten istenen sayıdadır OYUN BİTTİ- anonsunu geç ve devam et
+Bitir
