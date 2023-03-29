@@ -1,4 +1,4 @@
-P= input("Çemberde bulunacak oyuncu sayısını giriniz: ")
+P= input("Çemberde bulunacak oyuncu sayısını giriniz: ") 
 
 try: 
     P = int(P)
@@ -45,45 +45,60 @@ while p > 1:
             c = c + 1
             if oyuncular[i] == "Canlı":
                     if oyuncular[0] == "Canlı":
-                        oyuncular[0] = "Ölü"
+                        oyuncular[0] = ">Ölü<"
                         print(oyuncular, i+1, ". oyuncunun sırası")
                         p = p - 1
                         print(p)
                         if p == 1:
                             break
-                    elif oyuncular[0] == "Ölü":
+                    elif oyuncular[0] == ">Ölü<":
                         for t in range(1, P):
-                            if oyuncular[t] == "Ölü":
+                            if oyuncular[t] == ">Ölü<":
                                 continue
                             elif oyuncular[t] == "Canlı":
-                                oyuncular[t] = "Ölü"
+                                oyuncular[t] = ">Ölü<"
                                 print(oyuncular, i+1, ". oyuncunun sırası.")
                                 p = p - 1
                                 print(p)
                                 if p == 1:
                                     break
-                                break
-            elif oyuncular[i] == "Ölü":
+                                continue
+            elif oyuncular[i] == ">Ölü<":
                 break
         else:
             if oyuncular[i] == "Canlı":
                 for t in range(1, P):
-                    if oyuncular[i+t] == "Ölü":
-                        continue
-                    elif oyuncular[i+t] == "Canlı":
-                        oyuncular[i+t] = "Ölü"
-                        print(oyuncular, i+1, ". oyuncunun sırası.")
-                        p = p - 1
-                        print(p)
-                        if p == 1:
+                    if i+t < P:
+                        if oyuncular[i+t] == ">Ölü<":
+                            continue
+                        elif oyuncular[i+t] == "Canlı":
+                            oyuncular[i+t] = ">Ölü<"
+                            print(oyuncular, i+1, ". oyuncunun sırası.")
+                            p = p - 1
+                            print(p)
+                            if p == 1:
+                                break
                             break
-                        break
-                    
-            elif oyuncular[i] == "Ölü":
+                    else:
+                        for h in range(P):
+                            if oyuncular[h] == ">Ölü<":
+                                continue
+                            elif oyuncular[h] == "Canlı":
+                                if p == 1:
+                                    break
+                                else:
+                                    oyuncular[h] = ">Ölü<"
+                                    print(oyuncular, i+1, ". oyuncunun sırası.")
+                                    p = p - 1
+                                    print(p)
+                                    if p == 1:
+                                        break
+                                    break
+            elif oyuncular[i] == ">Ölü<":
                 if p == 1:
                     break
                 else:
-                    print(oyuncular, i+1, ". oyuncu ölü olduğundan sırası geçildi.")
+                    print(oyuncular, i+1, ". oyuncu >ölü< olduğundan sırası geçildi.")
                     continue
 
 for b in range(P):
