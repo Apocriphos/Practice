@@ -1,0 +1,20 @@
+P = 5
+
+p = 5
+
+['Canlı', 'Canlı', 'Canlı', 'Canlı', 'Canlı']
+
+i (0, 4)
+
+i = 0
+
+['Canlı', 'Ölü', 'Canlı', 'Canlı', 'Canlı']
+
+p = 4
+
+i = 1
+
+i = 2
+
+['Canlı', 'Ölü', 'Canlı', 'Ölü', 'Canlı']
+
